@@ -49,4 +49,3 @@ end
 def full?(board_array)
 
   board_array.each do |symbol|
-
