@@ -3,17 +3,6 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# Define your WIN_COMBINATIONS constant
-
-# top_row_win = [0,1,2]
-# middle_row_win = [3,4,5]
-# bottom_row_win = [6,7,8]
-# first_column_win = [0,3,6]
-# second_column_win = [1,4,7]
-# third_column_win = [2,5,8]
-# left_diagnol_win = [0,4,8]
-# right_diagnol_win = [2,4,6]
-
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
