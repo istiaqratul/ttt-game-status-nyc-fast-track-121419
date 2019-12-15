@@ -38,7 +38,7 @@ def won? (board_array)
     symbol_third_array = board_array [third_index_3]
 
     if symbol_first_array = symbol_second_array && symbol_first_array = symbol_third_array != ""
-      return winning_combo
+      return combo_array
     end
   end
 
@@ -49,3 +49,13 @@ end
 def full?(board_array)
 
   board_array.each do |symbol|
+    if symbol == " "
+      return false
+    end
+  end
+
+end
+
+def draw?(board_array)
+  if full?(board_array) && !won?(board_array)
+    return true
