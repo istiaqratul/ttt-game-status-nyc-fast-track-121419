@@ -44,7 +44,7 @@ def full?(board_array)
   end
 
   return true
-  
+
 end
 
 def draw?(board_array)
@@ -58,10 +58,9 @@ end
 def over?(board_array)
   if won?(board_array) || draw?(board_array)
     return
-  
+
 end
 
 def winner?(board)
   if won?(board)
     
-  
