@@ -27,19 +27,15 @@ WIN_COMBINATIONS = [
 
 def won? (board_array)
 
-  WIN_COMBINATIONS.each do |winning_combo|
-    top_row_win = wining_combo [0]
-    middle_row_win = winning_combo [1]
-    bottom_row_win = winning_combo [2]
-    first_column_win = winning_combo [3]
-    second_column_win = winning_combo [4]
-    third_column_win = winning_combo [5]
-    left_diagnol_win = winning_combo [6]
-    right_diagnol_win = winning_combo [7]
+  WIN_COMBINATIONS.each do |combo_array|
+    first_index_1 = combo_array [0]
+    second_index_2 = combo_array [1]
+    third_index_3 = combo_array [2]
 
-    symbol_first_array = board_array [top_row_win]
-    symbol_second_array = board_array [middle_row_win]
-    symbol_third_array = board_array [bottom_row_win]
+
+    symbol_first_array = board_array [first_index_1]
+    symbol_second_array = board_array [second_index_2]
+    symbol_third_array = board_array [third_index_3]
 
     if symbol_first_array = symbol_second_array && symbol_first_array = symbol_third_array != ""
       return winning_combo
@@ -50,5 +46,7 @@ def won? (board_array)
 
 end
 
+def full?(board_array)
 
-puts won?([" ","","","","","","",])
+  board_array.each do |symbol|
+
