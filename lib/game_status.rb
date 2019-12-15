@@ -43,3 +43,12 @@ def won? (board_array)
 
     if symbol_first_array = symbol_second_array && symbol_first_array = symbol_third_array != ""
       return winning_combo
+    end
+  end
+
+  return false
+
+end
+
+
+puts won?([" ","","","","","","",])
